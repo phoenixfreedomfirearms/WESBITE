@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://phoenixfreedomfirearms.com/sitemap.xml
+Sitemap: https://phoenixfreedomfirearms.com/image-sitemap.xml

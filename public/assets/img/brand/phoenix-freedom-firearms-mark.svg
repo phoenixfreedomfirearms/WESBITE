@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Phoenix Freedom Firearms mark</title>
+  <desc id="desc">A custom phoenix wing and sight mark for Phoenix Freedom Firearms.</desc>
+  <rect width="256" height="256" rx="32" fill="#050605"/>
+  <path d="M42 154c42-8 73-34 96-91 23 57 54 83 96 91-34 8-62 1-83-19 4 20 15 35 34 46-26 0-47-9-62-27-15 18-36 27-62 27 19-11 30-26 34-46-21 20-49 27-83 19Z" fill="#d9412b"/>
+  <path d="M96 118h84v18H96z" fill="#f4ead8"/>
+  <path d="M151 91h47v18h-47z" fill="#c9a45f"/>
+  <circle cx="128" cy="128" r="69" fill="none" stroke="#f4ead8" stroke-width="10" opacity=".2"/>
+  <circle cx="128" cy="128" r="37" fill="none" stroke="#c9a45f" stroke-width="8" opacity=".55"/>
+  <path d="M128 34v34M128 188v34M34 128h34M188 128h34" stroke="#f4ead8" stroke-width="8" stroke-linecap="round"/>
+</svg>

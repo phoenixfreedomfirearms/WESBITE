@@ -1,0 +1,19 @@
+{
+  "name": "Phoenix Freedom Firearms",
+  "short_name": "PFF",
+  "description": "Barnesville, GA FFL transfers, suppressor transfers, firearms, ammo, gunsmithing, and future survival training.",
+  "id": "/",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#050605",
+  "theme_color": "#050605",
+  "icons": [
+    {
+      "src": "/assets/img/brand/phoenix-freedom-firearms-logo.png",
+      "sizes": "358x358",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

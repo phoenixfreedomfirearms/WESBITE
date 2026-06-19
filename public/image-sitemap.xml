@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://phoenixfreedomfirearms.com/</loc>
+    <image:image><image:loc>https://phoenixfreedomfirearms.com/assets/img/brand/phoenix-freedom-firearms-logo.png</image:loc><image:title>Phoenix Freedom Firearms logo</image:title></image:image>
+    <image:image><image:loc>https://phoenixfreedomfirearms.com/assets/img/gallery/ar-rifle-optic-local-ffl-barnesville.jpg</image:loc><image:title>Local FFL firearm inventory in Barnesville GA</image:title></image:image>
+    <image:image><image:loc>https://phoenixfreedomfirearms.com/assets/img/gallery/barnesville-ga-firearms-wall-inventory.jpg</image:loc><image:title>Barnesville Georgia firearms wall inventory</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://phoenixfreedomfirearms.com/inventory.html</loc>
+    <image:image><image:loc>https://phoenixfreedomfirearms.com/assets/img/gallery/suppressor-inventory-form-4-transfer.jpg</image:loc><image:title>Suppressor inventory and Form 4 transfer support</image:title></image:image>
+    <image:image><image:loc>https://phoenixfreedomfirearms.com/assets/img/gallery/handgun-ammo-display-local-gun-store.jpg</image:loc><image:title>Handguns ammunition and optics display in Barnesville GA</image:title></image:image>
+    <image:image><image:loc>https://phoenixfreedomfirearms.com/assets/img/gallery/lever-action-rifle-local-inventory.jpg</image:loc><image:title>Lever action rifle local inventory</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://phoenixfreedomfirearms.com/custom-builds.html</loc>
+    <image:image><image:loc>https://phoenixfreedomfirearms.com/assets/img/gallery/gunsmithing-disassembled-revolver-service.jpg</image:loc><image:title>Gunsmithing service and inspection workbench</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://phoenixfreedomfirearms.com/survival-school.html</loc>
+    <image:image><image:loc>https://phoenixfreedomfirearms.com/assets/img/training/barnesville-survival-training-field-class.jpg</image:loc><image:title>Barnesville survival training field class</image:title></image:image>
+  </url>
+</urlset>
