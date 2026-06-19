@@ -4,8 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "sync:static": "node scripts/sync-static-pages.mjs",
+    "dev": "npm run sync:static && next dev",
+    "build": "npm run sync:static && next build",
     "start": "next start",
     "lint": "next lint"
   },
