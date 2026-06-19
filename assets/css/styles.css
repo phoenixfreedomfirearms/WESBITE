@@ -107,6 +107,9 @@ button {
   transform-origin: 0 50%;
   transform: scaleX(0);
   background: linear-gradient(90deg, var(--ember), var(--brass));
+  will-change: transform;
+  backface-visibility: hidden;
+  contain: layout style paint;
 }
 
 .site-header {
@@ -1779,6 +1782,10 @@ h3 {
 
   .brand {
     padding: 7px 10px;
+  }
+
+  .scroll-progress {
+    height: 3px;
   }
 
   h1 {

@@ -13,15 +13,27 @@ if (navToggle && navList) {
 
 const header = document.querySelector(".site-header");
 const progress = document.querySelector(".scroll-progress");
+let scrollTicking = false;
+
 const updateScroll = () => {
   const max = document.documentElement.scrollHeight - window.innerHeight;
   const ratio = max > 0 ? window.scrollY / max : 0;
-  if (progress) progress.style.transform = `scaleX(${Math.min(1, Math.max(0, ratio))})`;
+  if (progress) {
+    progress.style.transform = `scaleX(${Math.min(1, Math.max(0, ratio))})`;
+  }
   if (header) header.classList.toggle("is-scrolled", window.scrollY > 12);
   document.body.classList.toggle("quick-actions-visible", window.scrollY > 360 || document.body.classList.contains("page-light"));
+  scrollTicking = false;
+};
+
+const queueScrollUpdate = () => {
+  if (scrollTicking) return;
+  scrollTicking = true;
+  window.requestAnimationFrame(updateScroll);
 };
 updateScroll();
-window.addEventListener("scroll", updateScroll, { passive: true });
+window.addEventListener("scroll", queueScrollUpdate, { passive: true });
+window.addEventListener("resize", queueScrollUpdate, { passive: true });
 
 const path = window.location.pathname.split("/").pop() || "index.html";
 document.querySelectorAll(".nav-link").forEach((link) => {
