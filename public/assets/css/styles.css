@@ -107,6 +107,9 @@ button {
   transform-origin: 0 50%;
   transform: scaleX(0);
   background: linear-gradient(90deg, var(--ember), var(--brass));
+  will-change: transform;
+  backface-visibility: hidden;
+  contain: layout style paint;
 }
 
 .site-header {
@@ -137,6 +140,12 @@ button {
   align-items: center;
   gap: 12px;
   min-width: 0;
+  padding: 8px 12px;
+  border: 1px solid rgba(200, 164, 94, .2);
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(16, 19, 17, .98), rgba(16, 19, 17, .8));
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .35);
+  isolation: isolate;
 }
 
 .brand-logo {
@@ -157,13 +166,16 @@ button {
   font-size: 1rem;
   letter-spacing: 0;
   text-transform: uppercase;
+  color: var(--bone);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, .55);
 }
 
 .brand-location {
-  color: #c7bfae;
+  color: #e2d4b6;
   font-family: var(--mono);
   font-size: .72rem;
   text-transform: uppercase;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, .45);
 }
 
 .nav-toggle {
@@ -244,6 +256,25 @@ button {
     linear-gradient(180deg, rgba(82, 108, 89, .17), transparent 80%),
     #111411;
   color: var(--bone);
+}
+
+.booking-section {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.booking-card {
+  overflow: hidden;
+  border: 1px solid rgba(200, 164, 94, .36);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.booking-card .calendly-inline-widget {
+  width: 100%;
+  min-height: 760px !important;
+  height: 760px !important;
 }
 
 .container {
@@ -381,6 +412,10 @@ h3 {
   font-size: 3.55rem;
 }
 
+.hero-title span {
+  text-shadow: 0 8px 24px rgba(0, 0, 0, .36);
+}
+
 .hero-title .accent {
   color: var(--brass);
 }
@@ -389,31 +424,109 @@ h3 {
   width: min(100%, 430px);
   height: auto;
   margin: 0 0 18px;
-  color: rgba(200, 164, 94, .9);
-  filter: drop-shadow(0 0 14px rgba(200, 164, 94, .18));
+  color: rgba(202, 166, 95, .98);
+  filter: drop-shadow(0 0 16px rgba(202, 166, 95, .22));
+  overflow: visible;
 }
 
-.rifle-line {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 3;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 520;
-  stroke-dashoffset: 520;
-  animation: drawLine 2.8s ease forwards, linePulse 4.6s ease-in-out infinite 3s;
+.rifle-art {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: rifleIntro .9s cubic-bezier(.2, .9, .2, 1) forwards;
 }
 
-.rifle-detail {
-  animation-delay: .35s, 3.2s;
+.rifle-piece {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: riflePieceIn .9s cubic-bezier(.18, .9, .2, 1) forwards;
 }
 
-.rifle-barrel {
-  animation-delay: .55s, 3.4s;
+.rifle-shadow {
+  fill: rgba(72, 47, 18, .24);
+  filter: blur(1.2px);
+  transform: translate(2px, 3px);
+  animation-delay: .02s;
+}
+
+.rifle-stock {
+  fill: #7f5d2d;
+  stroke: rgba(255, 248, 232, .14);
+  stroke-width: 1.2;
+  animation-delay: .06s;
+}
+
+.rifle-receiver,
+.rifle-handguard,
+.rifle-bolt {
+  fill: #a07a3f;
+  stroke: rgba(255, 248, 232, .12);
+  stroke-width: 1.1;
+}
+
+.rifle-receiver {
+  animation-delay: .1s;
+}
+
+.rifle-rail,
+.rifle-optic,
+.rifle-muzzle,
+.rifle-foregrip {
+  fill: rgba(210, 168, 89, .98);
+  stroke: rgba(255, 248, 232, .12);
+  stroke-width: 1;
+}
+
+.rifle-rail {
+  animation-delay: .14s;
+}
+
+.rifle-optic {
+  fill: #c39c67;
+  animation-delay: .18s;
+}
+
+.rifle-grip {
+  fill: #563c1e;
+  stroke: rgba(255, 248, 232, .12);
+  stroke-width: 1;
+  animation-delay: .22s;
+}
+
+.rifle-mag {
+  fill: #8f6530;
+  stroke: rgba(255, 248, 232, .12);
+  stroke-width: 1;
+  animation-delay: .26s;
 }
 
 .rifle-trigger {
-  animation-delay: .75s, 3.6s;
+  fill: none;
+  stroke: rgba(255, 239, 206, .95);
+  stroke-width: 3;
+  stroke-linecap: round;
+  animation-delay: .3s;
+}
+
+.rifle-barrel {
+  fill: rgba(229, 186, 104, .98);
+  stroke: rgba(255, 248, 232, .14);
+  stroke-width: .9;
+  animation-delay: .34s;
+}
+
+.rifle-outline {
+  fill: none;
+  stroke: rgba(255, 238, 199, .68);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation-delay: .38s;
+}
+
+.price-cluster {
+  display: grid;
+  gap: 8px;
 }
 
 .price-lockup {
@@ -426,6 +539,11 @@ h3 {
   padding: 14px;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+}
+
+.price-lockup-secondary {
+  max-width: 700px;
+  margin-top: 0;
 }
 
 .price-number {
@@ -786,7 +904,7 @@ h3 {
 
 .price-board {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 14px;
   margin-bottom: 18px;
 }
@@ -1017,6 +1135,125 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
+}
+
+.review-grid.compact {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 100%;
+  padding: 26px;
+}
+
+.review-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 24px 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(200, 164, 94, 0), rgba(200, 164, 94, .7), rgba(200, 164, 94, 0));
+  opacity: .8;
+}
+
+.review-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.review-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border: 1px solid rgba(200, 164, 94, .34);
+  border-radius: 999px;
+  background: rgba(255, 248, 232, .06);
+  color: var(--brass);
+  font-family: var(--mono);
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.review-stars {
+  display: inline-flex;
+  gap: 4px;
+  color: #f3bf52;
+  font-size: .92rem;
+  letter-spacing: .08em;
+}
+
+.review-card h3 {
+  margin-bottom: 4px;
+  font-size: 1.2rem;
+}
+
+.review-role {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: .74rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.section-paper .review-role {
+  color: #6d6658;
+}
+
+.review-quote {
+  margin: 0;
+  color: #f1eadb;
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.review-quote::before {
+  content: "\"";
+  display: block;
+  margin-bottom: 6px;
+  color: rgba(200, 164, 94, .7);
+  font-family: var(--display);
+  font-size: 2.2rem;
+  line-height: .7;
+}
+
+.section-paper .review-quote {
+  color: #2f332d;
+}
+
+.review-card a {
+  margin-top: auto;
+  color: var(--brass);
+  font-weight: 900;
+}
+
+.review-card a:hover {
+  color: #f0c56d;
+}
+
+.review-highlight {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(217, 65, 43, .14);
+  color: var(--bone);
+  font-family: var(--mono);
+  font-size: .72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.section-paper .review-highlight {
+  color: #57180f;
 }
 
 .review-card a {
@@ -1330,6 +1567,11 @@ h3 {
   text-shadow: 0 16px 34px rgba(0, 0, 0, .48);
 }
 
+.page-hero .eyebrow,
+.hero-kicker {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, .35);
+}
+
 .page-hero .lead {
   color: #e2dacb;
   text-shadow: 0 10px 24px rgba(0, 0, 0, .36);
@@ -1548,6 +1790,14 @@ h3 {
     font-size: .66rem;
   }
 
+  .brand {
+    padding: 7px 10px;
+  }
+
+  .scroll-progress {
+    height: 3px;
+  }
+
   h1 {
     font-size: 2.55rem;
   }
@@ -1657,6 +1907,11 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .booking-card .calendly-inline-widget {
+    min-height: 690px !important;
+    height: 690px !important;
+  }
+
   .inventory-shot,
   .inventory-shot.wide,
   .inventory-shot.tall {
@@ -1721,5 +1976,31 @@ h3 {
 
   50% {
     opacity: 1;
+  }
+}
+
+@keyframes rifleIntro {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes riflePieceIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(.96);
+    filter: blur(1.5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
   }
 }

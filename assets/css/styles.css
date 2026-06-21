@@ -524,6 +524,11 @@ h3 {
   animation-delay: .38s;
 }
 
+.price-cluster {
+  display: grid;
+  gap: 8px;
+}
+
 .price-lockup {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
@@ -534,6 +539,11 @@ h3 {
   padding: 14px;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+}
+
+.price-lockup-secondary {
+  max-width: 700px;
+  margin-top: 0;
 }
 
 .price-number {
@@ -894,7 +904,7 @@ h3 {
 
 .price-board {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 14px;
   margin-bottom: 18px;
 }
