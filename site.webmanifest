@@ -3,7 +3,7 @@
   "short_name": "PFF",
   "description": "Barnesville, GA FFL transfers, suppressor transfers, firearms, ammo, cleaning services, and Georgia Sentinels training updates.",
   "id": "/",
-  "start_url": "/index.html",
+  "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#050605",

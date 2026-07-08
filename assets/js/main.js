@@ -35,10 +35,12 @@ updateScroll();
 window.addEventListener("scroll", queueScrollUpdate, { passive: true });
 window.addEventListener("resize", queueScrollUpdate, { passive: true });
 
-const path = window.location.pathname.split("/").pop() || "index.html";
+const pathname = window.location.pathname.replace(/\/+$/, "") || "/";
+const currentPage = pathname === "/" ? "/" : pathname.split("/").pop() || "/";
 document.querySelectorAll(".nav-link").forEach((link) => {
   const href = link.getAttribute("href");
-  if (href === path || (path === "" && href === "index.html")) {
+  const isHomeLink = href === "/";
+  if ((isHomeLink && (pathname === "/" || currentPage === "index.html")) || href === currentPage) {
     link.classList.add("is-active");
   }
 });
