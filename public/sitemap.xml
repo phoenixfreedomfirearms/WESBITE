@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://phoenixfreedomfirearms.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://phoenixfreedomfirearms.com/services.html</loc><priority>0.9</priority></url>
-  <url><loc>https://phoenixfreedomfirearms.com/ffl-transfer.html</loc><priority>0.95</priority></url>
-  <url><loc>https://phoenixfreedomfirearms.com/suppressors.html</loc><priority>0.85</priority></url>
-  <url><loc>https://phoenixfreedomfirearms.com/inventory.html</loc><priority>0.9</priority></url>
-  <url><loc>https://phoenixfreedomfirearms.com/custom-builds.html</loc><priority>0.8</priority></url>
-  <url><loc>https://phoenixfreedomfirearms.com/safety-classes.html</loc><priority>0.75</priority></url>
-  <url><loc>https://phoenixfreedomfirearms.com/survival-school.html</loc><priority>0.75</priority></url>
-  <url><loc>https://phoenixfreedomfirearms.com/service-area.html</loc><priority>0.85</priority></url>
-  <url><loc>https://phoenixfreedomfirearms.com/contact.html</loc><priority>0.9</priority></url>
-  <url><loc>https://phoenixfreedomfirearms.com/terms.html</loc><priority>0.3</priority></url>
-  <url><loc>https://phoenixfreedomfirearms.com/privacy.html</loc><priority>0.3</priority></url>
-  <url><loc>https://phoenixfreedomfirearms.com/cookies.html</loc><priority>0.3</priority></url>
-  <url><loc>https://phoenixfreedomfirearms.com/returns.html</loc><priority>0.3</priority></url>
+  <url><loc>https://phoenixfreedomfirearms.com/services</loc><priority>0.9</priority></url>
+  <url><loc>https://phoenixfreedomfirearms.com/ffl-transfer</loc><priority>0.95</priority></url>
+  <url><loc>https://phoenixfreedomfirearms.com/suppressors</loc><priority>0.85</priority></url>
+  <url><loc>https://phoenixfreedomfirearms.com/inventory</loc><priority>0.9</priority></url>
+  <url><loc>https://phoenixfreedomfirearms.com/custom-builds</loc><priority>0.8</priority></url>
+  <url><loc>https://phoenixfreedomfirearms.com/safety-classes</loc><priority>0.75</priority></url>
+  <url><loc>https://phoenixfreedomfirearms.com/survival-school</loc><priority>0.75</priority></url>
+  <url><loc>https://phoenixfreedomfirearms.com/service-area</loc><priority>0.85</priority></url>
+  <url><loc>https://phoenixfreedomfirearms.com/contact</loc><priority>0.9</priority></url>
+  <url><loc>https://phoenixfreedomfirearms.com/terms</loc><priority>0.3</priority></url>
+  <url><loc>https://phoenixfreedomfirearms.com/privacy</loc><priority>0.3</priority></url>
+  <url><loc>https://phoenixfreedomfirearms.com/cookies</loc><priority>0.3</priority></url>
+  <url><loc>https://phoenixfreedomfirearms.com/returns</loc><priority>0.3</priority></url>
 </urlset>

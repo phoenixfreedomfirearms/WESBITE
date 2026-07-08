@@ -36,11 +36,11 @@ window.addEventListener("scroll", queueScrollUpdate, { passive: true });
 window.addEventListener("resize", queueScrollUpdate, { passive: true });
 
 const pathname = window.location.pathname.replace(/\/+$/, "") || "/";
-const currentPage = pathname === "/" ? "/" : pathname.split("/").pop() || "/";
 document.querySelectorAll(".nav-link").forEach((link) => {
   const href = link.getAttribute("href");
-  const isHomeLink = href === "/";
-  if ((isHomeLink && (pathname === "/" || currentPage === "index.html")) || href === currentPage) {
+  if (!href) return;
+  const normalizedHref = href.replace(/\/+$/, "") || "/";
+  if (normalizedHref === pathname) {
     link.classList.add("is-active");
   }
 });
